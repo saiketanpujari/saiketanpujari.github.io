@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="lilili.css">
+    <script src="https://kit.fontawesome.com/55f8988eb5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <a href="#" class="logo"></a>
+                    <ul id="sidemenu">
+                        <li><a href="#Home">Home</a></li> 
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#portfolio">Projects</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                      <i class="fas fa-times" aria-hidden="true"onclick = "closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick = "openmenu()"></i>
+                
+                  </nav>
+            </div>
+        </div>
+    </nav>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image3.png" alt="Profile Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hello,I'm P.Sai Ketan currently pursuing my B.tech in AIML at NSRIT college.
+                        I'm passionate about designing and art, and I'm eager to
+                        delve deeper into User Experience Design.I'm always excited to engage in discussions and explore new ideas .
+                        Looking forward to learning and growing alongside my peers</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Tools')">Tools</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>User Flows</li>
+                            <li>User Journey Mapping</li>
+                            <li>Wireframes</li>
+                            <li> Prototyping</li>
+                            <li> Mockups</li>
+                            <li> User Interviews</li>
+                            <li>Usability Testings</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Tools">
+                        <ul>
+                            <li>Figma</li>
+                            <li>Wix</li>
+                            <li>Framer</li>
+                            <li>sketch</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <p> Have done a Virtual internship of 4 weeks in UI/UX design at codsoft</p>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li>2021-2025 - B.Tech at NSRIT College</li>
+                            <li>2019-2021 - Narayana Junior college</li>
+                            <li>2019 - 10th at Bhashyam High school</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="422.png" alt="Project 1">
+                    <div class="layer">
+                        <h3>NAEBU </h3>
+                        <p>" interior studio app lets you pick out furniture and decor items to match your style, and then we deliver them right to your doorstep."</p>
+                        <a href="p1.pdf"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="1011.png" alt="Project 2">
+                    <div class="layer">
+                        <h3>FLOWERBY </h3>
+                        <p>""Welcome to My Flower By app! With this, you can personalize your bouquets by choosing your favorite flowers and wrappers. Simply pick what you love, and we'll deliver your customized bouquet straight to your doorstep."</p>
+                        <a href="p2.pdf"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="141.png" alt="Project 3">
+                    <div class="layer">
+                        <h3>Wireframes</h3>
+                        <p>"These are some simple low-fidelity wireframes created by me."</p>
+                        <a href="p3.pdf"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>Ketanpujari.03@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 8639887062</p>
+                    <p><i class="fa-brands fa-whatsapp"></i>8106659128</p>
+                    <div class="socialmedia-icons">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <a href="resume.pdf" download class="btn button">Download Resume</a>
+
+                </div>
+                </div> 
+                </div>
+            </div>
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+              
+                function opentab(tabname) {
+                  for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                  }
+                  for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                  }
+                  event.currentTarget.classList.add("active-link");
+                  document.getElementById(tabname).classList.add("active-tab");
+                }
+              </script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+        </body>
+        </html>
